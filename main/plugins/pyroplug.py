@@ -1,5 +1,4 @@
-# Github.com/Vasusen-code
-
+# Github.com/TeamUltronX
 import asyncio, time, os
 
 from .. import Bot, bot
