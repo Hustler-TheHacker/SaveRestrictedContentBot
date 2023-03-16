@@ -1,5 +1,4 @@
-#Github.com/Vasusen-code
-
+#Github.com/TeamUltronX
 from pyrogram.errors import FloodWait, InviteHashInvalid, InviteHashExpired, UserAlreadyParticipant
 from telethon import errors, events
 
