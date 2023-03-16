@@ -1,8 +1,8 @@
-#Github.com/Vasusen-code
+#Github.com/TeamUltronX
 
 import time, os
 
-from .. import bot as Drone
+from .. import bot as TeamUltronX
 from .. import userbot, Bot
 from .. import FORCESUB as fs
 from main.plugins.pyroplug import get_msg
@@ -25,7 +25,7 @@ user=[]
 # Make these codes shorter and clean
 # ofc will never do it. 
 
-@Drone.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
+@TeamUltronX.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def clone(event):
     if event.is_reply:
         reply = await event.get_reply_message()
@@ -52,9 +52,9 @@ async def clone(event):
         if 't.me/' in link:
             await get_msg(userbot, Bot, event.sender_id, edit.id, link, 0)
     except FloodWait as fw:
-        await Drone.send_message(event.sender_id, f'Try again after {fw.x} seconds due to floodwait from telegram.')
+        await TeamUltronX.send_message(event.sender_id, f'Try again after {fw.x} seconds due to floodwait from telegram.')
     except Exception as e:
         print(e)
-        await Drone.send_message(event.sender_id, f"An error occurred during cloning of `{link}`\n\n**Error:** {str(e)}")
+        await TeamUltronX.send_message(event.sender_id, f"An error occurred during cloning of `{link}`\n\n**Error:** {str(e)}")
     ind = user.index(f'{int(event.sender_id)}')
     user.pop(int(ind))
