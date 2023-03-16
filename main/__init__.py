@@ -1,4 +1,4 @@
-#Github.com/Vasusen-code
+#Github.com/Hustler-TheHacker
 
 from pyrogram import Client
 
