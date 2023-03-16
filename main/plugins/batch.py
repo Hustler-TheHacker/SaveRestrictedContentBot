@@ -1,5 +1,5 @@
-#Tg:MaheshChauhan/DroneBots
-#Github.com/Vasusen-code
+#Tg:XD_TyCHoN_deV/TeamUltronX
+#Github.com/TeamUltronX
 
 """
 Plugin for both public & private channels!
@@ -7,7 +7,7 @@ Plugin for both public & private channels!
 
 import time, os, asyncio
 
-from .. import bot as Drone
+from .. import bot as TeamUltronX
 from .. import userbot, Bot, AUTH
 from .. import FORCESUB as fs
 from main.plugins.pyroplug import check, get_bulk_msg
@@ -31,7 +31,7 @@ async def get_pvt_content(event, chat, id):
     msg = await userbot.get_messages(chat, ids=id)
     await event.client.send_message(event.chat_id, msg) 
     
-@Drone.on(events.NewMessage(incoming=True, from_users=AUTH, pattern='/batch'))
+@TeamUltronX.on(events.NewMessage(incoming=True, from_users=AUTH, pattern='/batch'))
 async def _batch(event):
     if not event.is_private:
         return
@@ -43,7 +43,7 @@ async def _batch(event):
         return       
     if f'{event.sender_id}' in batch:
         return await event.reply("You've already started one batch, wait for it to complete you dumbfuck owner!")
-    async with Drone.conversation(event.chat_id) as conv: 
+    async with TeamUltronX.conversation(event.chat_id) as conv: 
         if s != True:
             await conv.send_message("Send me the message link you want to start saving from, as a reply to this message.", buttons=Button.force_reply())
             try:
@@ -79,7 +79,7 @@ async def _batch(event):
             batch.clear()
             batch_.clear()
             
-@Drone.on(events.callbackquery.CallbackQuery(data="cancel"))
+@TeamUltronX.on(events.callbackquery.CallbackQuery(data="cancel"))
 async def cancel(event):
     batch_.clear()
     
